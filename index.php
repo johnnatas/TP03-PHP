@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
         <title>Index</title>
     </head>
     <body>
@@ -30,6 +30,6 @@
             <h1 class="text-center">Trabalho Prático de Linguagem de Programação IV</h1>
         </div>
 
-    <script src="js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     </body>
 </html>
