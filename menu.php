@@ -17,27 +17,22 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                        <span class="sr-only">Menu</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
                 </div>
                 <div id="navbar" class="navbar-collapse">
                     <ul class="nav" id="menu">
                         <li class="col-md-4">
                             <a href="#">
-                                Home
+                                Inserir
                             </a>
                         </li>
                         <li class="col-md-4">
                             <a href="#about">
-                                About
+                                Atualizar
                             </a>
                         </li>
                         <li class="col-md-4">
                             <a href="#contact">
-                                Contact
+                                Deletar
                             </a>
                         </li>
                     </ul>

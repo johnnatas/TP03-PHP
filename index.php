@@ -13,10 +13,25 @@
 
         <!-- página -->
             <div class="container">
+
+                <h1 class="text-center">Trabalho Prático de Linguagem de Programação IV</h1>
+
                 <div id="logo">
                     <img src="assets/img/logo-fatec.png" alt="logo-fatec" class="img-responsive">
                 </div>
-                <h1 class="text-center">Trabalho Prático de Linguagem de Programação IV</h1>
+
+                <h2 class="text-center">Lista de todos os cadastrados no sistema:</h2>
+
+                <br>
+                <br>
+                <br>
+
+                <?php
+                    include_once 'Classes/Banco.php';
+                    $banco = new Banco();
+                    $banco->listar();
+                ?>
+
             </div>
 
         <!-- rodapé -->
