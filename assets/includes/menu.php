@@ -19,23 +19,35 @@
                     </button>
                 </div>
                 <div id="navbar" class="navbar-collapse">
-                    <ul class="nav" id="menu">
-                        <li class="col-md-4">
-                            <a href="inserir.php">
-                                Inserir
-                            </a>
-                        </li>
-                        <li class="col-md-4">
-                            <a href="">
-                                Atualizar
-                            </a>
-                        </li>
-                        <li class="col-md-4">
-                            <a href="">
-                                Deletar
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="row">
+                        <div id="logo" class="col-md-4">
+                            <img src="assets/img/logo-fatec.png" alt="logo-fatec" class="img-responsive">
+                        </div>
+                        <div class="col-md-7 col-md-offset-1">
+                            <ul class="nav" id="menu">
+                                <li class="col-md-3">
+                                    <a href="index.php">
+                                        Início
+                                    </a>
+                                </li>
+                                <li class="col-md-3">
+                                    <a href="inserir.php">
+                                        Inserir
+                                    </a>
+                                </li>
+                                <li class="col-md-3">
+                                    <a href="">
+                                        Atualizar
+                                    </a>
+                                </li>
+                                <li class="col-md-3">
+                                    <a href="">
+                                        Deletar
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
