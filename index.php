@@ -2,11 +2,12 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
         <title>Index</title>
     </head>
     <body>
     <div class="container">
+        <!--MENU-->
         <nav class="navbar navbar-inverse navbar-toggleable-md bg-inverse">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -18,7 +19,7 @@
                         <a class="nav-link" href="#">Página Inicial<span class="sr-only">(Current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">#</a>
+                        <a class="nav-link" href="form.php">Formulário</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">#</a>
@@ -26,10 +27,13 @@
                 </ul>
             </div>
         </nav>
+        <!--FIM-MENU-->
         <div class="container">
             <h1 class="text-center">Trabalho Prático de Linguagem de Programação IV</h1>
+
+
         </div>
 
-    <script src="js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     </body>
 </html>
