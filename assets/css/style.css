@@ -1,0 +1,11 @@
+#menu a, footer{
+    text-align: center;
+}
+
+ul#menu{
+    margin-top: 50px;
+}
+
+.formulario{
+    margin-bottom: 10px;
+}
