@@ -57,6 +57,7 @@ if ($_FILES) { // Se $_FILES diferente de vazio, equivale a true
         }
     }
 }
+?>
 
 <!DOCTYPE html>
 <html lang="pt_BR">
