@@ -5,8 +5,11 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/includes/header.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inserir.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/menu.php" afterPath="$PROJECT_DIR$/menu.php" />
+=======
+>>>>>>> 0714fbaa2ad6a6faf3a29665635e1ba43ef14577
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -92,7 +95,11 @@
       <file leaf-file-name="Banco.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Classes/Banco.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="446">
+=======
+            <state relative-caret-position="441">
+>>>>>>> 0714fbaa2ad6a6faf3a29665635e1ba43ef14577
               <caret line="57" column="24" lean-forward="false" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
               <folding>
                 <element signature="e#7#88#0#PHP" expanded="false" />
@@ -177,6 +184,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
+      <pane id="Scratches" />
+      <pane id="Scope" />
+>>>>>>> 0714fbaa2ad6a6faf3a29665635e1ba43ef14577
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -237,8 +249,11 @@
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scratches" />
       <pane id="Scope" />
+=======
+>>>>>>> 0714fbaa2ad6a6faf3a29665635e1ba43ef14577
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -365,17 +380,29 @@
       <workItem from="1496272045597" duration="1406000" />
       <workItem from="1496358226464" duration="4291000" />
       <workItem from="1496366239126" duration="598000" />
+<<<<<<< HEAD
       <workItem from="1496446050724" duration="5492000" />
       <workItem from="1496504717259" duration="5196000" />
+=======
+      <workItem from="1496446050724" duration="5655000" />
+      <workItem from="1496496174955" duration="599000" />
+>>>>>>> 0714fbaa2ad6a6faf3a29665635e1ba43ef14577
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="26579000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
+=======
+    <option name="totallyTimeSpent" value="22145000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1" y="-11" width="1368" height="780" extended-state="6" />
+>>>>>>> 0714fbaa2ad6a6faf3a29665635e1ba43ef14577
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19180088" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -410,25 +437,44 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="374">
+=======
+        <state relative-caret-position="330">
+>>>>>>> 0714fbaa2ad6a6faf3a29665635e1ba43ef14577
           <caret line="22" column="38" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/assets/includes/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
           <folding>
             <element signature="e#6#87#0#PHP" expanded="false" />
+=======
+    <entry file="file://$PROJECT_DIR$/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+>>>>>>> 0714fbaa2ad6a6faf3a29665635e1ba43ef14577
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/assets/includes/menu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
+=======
+    <entry file="file://$PROJECT_DIR$/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+>>>>>>> 0714fbaa2ad6a6faf3a29665635e1ba43ef14577
           <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
           <folding>
             <element signature="e#6#87#0#PHP" expanded="true" />
@@ -438,7 +484,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="17">
+=======
+        <state relative-caret-position="15">
+>>>>>>> 0714fbaa2ad6a6faf3a29665635e1ba43ef14577
           <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
           <folding />
         </state>
@@ -446,12 +496,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Banco.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="969">
           <caret line="57" column="24" lean-forward="false" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
           <folding>
             <element signature="e#7#88#0#PHP" expanded="false" />
             <marker date="1496504521436" expanded="true" signature="337:365" ph="SELECT * FRO... tb_cadastrados" />
             <marker date="1496504521436" expanded="true" signature="1954:2073" ph="INSERT INTO tb_cadastrados... " />
+=======
+        <state relative-caret-position="780">
+          <caret line="57" column="24" lean-forward="false" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+          <folding>
+            <element signature="e#7#88#0#PHP" expanded="false" />
+            <marker date="1496452347188" expanded="true" signature="337:365" ph="SELECT * FRO... tb_cadastrados" />
+            <marker date="1496452347188" expanded="true" signature="1954:2073" ph="INSERT INTO tb_cadastrados... " />
+>>>>>>> 0714fbaa2ad6a6faf3a29665635e1ba43ef14577
           </folding>
         </state>
       </provider>
@@ -757,8 +816,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/includes/formulario.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="546">
           <caret line="35" column="7" lean-forward="false" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+=======
+        <state relative-caret-position="441">
+          <caret line="57" column="24" lean-forward="false" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+>>>>>>> 0714fbaa2ad6a6faf3a29665635e1ba43ef14577
           <folding>
             <element signature="e#6#95#0#PHP" expanded="true" />
           </folding>
