@@ -36,12 +36,12 @@
                                     </a>
                                 </li>
                                 <li class="col-md-3">
-                                    <a href="">
+                                    <a href="atualizar.php">
                                         Atualizar
                                     </a>
                                 </li>
                                 <li class="col-md-3">
-                                    <a href="">
+                                    <a href="deletar.php">
                                         Deletar
                                     </a>
                                 </li>

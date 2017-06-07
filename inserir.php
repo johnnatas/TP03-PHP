@@ -1,20 +1,21 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Jonatas Lopes
- * Date: 03/06/2017
- * Time: 12:54
- */
-?>
-
-
-<?php
     include 'assets/includes/header.php';
     include 'assets/includes/menu.php';
 ?>
 
     <div class="container">
-        <?php include_once 'assets/includes/formulario.php'; ?>
+        <div class="row">
+            <div class="col-md-6">
+                <?php include_once 'assets/includes/formulario.php'; ?>
+            </div>
+            <div class="col-md-6">
+              <?php
+                include 'Classes/Banco.php';
+                $banco = new Banco();
+                $banco->listar();
+              ?>
+            </div>
+        </div>
     </div>
 
 <?php

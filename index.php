@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
-        <title>Index</title>
-    </head>
-    <body>
-=======
 <?php include 'assets/includes/header.php' ?>
         <!-- cabeçalho -->
         <?php include 'assets/includes/menu.php' ?>
@@ -18,6 +8,11 @@
                 <h1 class="text-center">Trabalho Prático de Linguagem de Programação IV</h1>
 
                 <h2 class="text-center">Lista de todos os cadastrados no sistema:</h2>
+
+                <div class="row">
+                    <input type="text" class="form-control" /><br>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
 
                 <br>
                 <br>
@@ -37,6 +32,5 @@
         <!-- scripts -->
         <?php include 'assets/includes/scripts.php' ?>
 
->>>>>>> aa22838c956d4d37bd05841bf477d2771a63715e
     </body>
 </html>

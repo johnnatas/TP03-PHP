@@ -9,3 +9,8 @@ ul#menu{
 .formulario{
     margin-bottom: 10px;
 }
+
+i.fa-search{
+    color: red;
+    font-size: 25px;
+}

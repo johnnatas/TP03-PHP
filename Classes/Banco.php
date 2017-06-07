@@ -15,22 +15,24 @@ class Banco
             echo "Erro ao conectar com banco de dados: " . PHP_EOL;
         }
         else{
-            $cmd = $con->query("SELECT * FROM aluno");
-            while($ln = $cmd->fetch_array()){
-                //tabela listando os dados
-?>
+            $cmd = $con->query("SELECT * FROM tb_aluno");
+            ?>
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Data de Nascimento</th>
+                        <th>Comentário</th>
+                        <th>Curso</th>
+                        <th>Sexo</th>
+                    </tr>
 
-                <div class="table-responsive">
-                    <table class="table">
-                        <tr>
-                            <th>ID</th>
-                            <th>Nome</th>
-                            <th>E-mail</th>
-                            <th>Data de Nascimento</th>
-                            <th>Comentário</th>
-                            <th>Curso</th>
-                            <th>Sexo</th>
-                        </tr>
+        <?php
+            while($ln = $cmd->fetch_array()){
+                //listando os dados
+        ?>
                         <tr>
                             <td><?php echo $ln['id'] ?></td>
                             <td><?php echo $ln['nome'] ?></td>
@@ -40,11 +42,12 @@ class Banco
                             <td><?php echo $ln['curso'] ?></td>
                             <td><?php echo $ln['sexo'] ?></td>
                         </tr>
-                    </table>
-                </div>
+        <?php } ?>
+
+                </table>
+            </div>
 
 <?php
-            }
             mysqli_close($con);
         }
     }
@@ -52,7 +55,7 @@ class Banco
     function inserir($id, $nome, $email, $data,$comentario, $curso, $sexo ){
 
         $con = mysqli_connect("localhost", "root", "", "db_tp03");
-        $cmd = $con->query("INSERT INTO tb_cadastrados VALUES ($id, $nome, $email, $data,$comentario, $curso, $sexo ");
+        $cmd = $con->query("INSERT INTO tb_aluno VALUES ($id, $nome, $email, $data,$comentario, $curso, $sexo ");
         //a continuar...
 
     }
