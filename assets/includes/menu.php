@@ -21,17 +21,17 @@
                 <div id="navbar" class="navbar-collapse">
                     <ul class="nav" id="menu">
                         <li class="col-md-4">
-                            <a href="#">
+                            <a href="inserir.php">
                                 Inserir
                             </a>
                         </li>
                         <li class="col-md-4">
-                            <a href="#about">
+                            <a href="">
                                 Atualizar
                             </a>
                         </li>
                         <li class="col-md-4">
-                            <a href="#contact">
+                            <a href="">
                                 Deletar
                             </a>
                         </li>
