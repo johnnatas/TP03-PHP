@@ -15,7 +15,7 @@ class Banco
             echo "Erro ao conectar com banco de dados: " . PHP_EOL;
         }
         else{
-            $cmd = $con->query("SELECT * FROM tb_cadastrados");
+            $cmd = $con->query("SELECT * FROM aluno");
             while($ln = $cmd->fetch_array()){
                 //tabela listando os dados
 ?>
@@ -23,24 +23,22 @@ class Banco
                 <div class="table-responsive">
                     <table class="table">
                         <tr>
+                            <th>ID</th>
                             <th>Nome</th>
                             <th>E-mail</th>
-                            <th>Data</th>
-                            <th>Numérico</th>
-                            <th>Texto validado por expressão regular</th>
-                            <th>Texto de várias linhas</th>
-                            <th>Dropdown list</th>
-                            <th>Radio Button</th>
+                            <th>Data de Nascimento</th>
+                            <th>Comentário</th>
+                            <th>Curso</th>
+                            <th>Sexo</th>
                         </tr>
                         <tr>
-                            <td><?php echo $ln['nm_cadastrado'] ?></td>
-                            <td><?php echo $ln['nm_email'] ?></td>
-                            <td><?php echo $ln['dt_nascimento'] ?></td>
-                            <td><?php echo $ln['numerico'] ?></td>
-                            <td><?php echo $ln['ds_texto'] ?></td>
-                            <td><?php echo $ln['ds_txtvariaslinhas'] ?></td>
-                            <td><?php echo $ln['dropdown'] ?></td>
-                            <td><?php echo $ln['rdb'] ?></td>
+                            <td><?php echo $ln['id'] ?></td>
+                            <td><?php echo $ln['nome'] ?></td>
+                            <td><?php echo $ln['email'] ?></td>
+                            <td><?php echo $ln['data'] ?></td>
+                            <td><?php echo $ln['comentario'] ?></td>
+                            <td><?php echo $ln['curso'] ?></td>
+                            <td><?php echo $ln['sexo'] ?></td>
                         </tr>
                     </table>
                 </div>
@@ -51,10 +49,10 @@ class Banco
         }
     }
 
-    function inserir($nome, $email, $data, $num,$validacao_texto, $texto_varias_linhas, $dropdwon, $rdb ){
+    function inserir($id, $nome, $email, $data,$comentario, $curso, $sexo ){
 
         $con = mysqli_connect("localhost", "root", "", "db_tp03");
-        $cmd = $con->query("INSERT INTO tb_cadastrados VALUES ($nome, $email, $data, $num, $validacao_texto, $texto_varias_linhas, $dropdwon, $rdb)");
+        $cmd = $con->query("INSERT INTO tb_cadastrados VALUES ($id, $nome, $email, $data,$comentario, $curso, $sexo ");
         //a continuar...
 
     }
