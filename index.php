@@ -19,8 +19,8 @@
                 <br>
 
                 <?php
-                    include_once("conexaoBanco.php");
-                    include_once("select.php");
+                    include_once "conexaoBanco.php";
+                    include_once "select.php";
                 ?>
 
             </div>

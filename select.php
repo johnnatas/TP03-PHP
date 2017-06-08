@@ -12,16 +12,16 @@ $linha = mysqli_fetch_assoc($tab);
 ?>
 <div class='table-responsive'>
     <table class='table'>
-        <tr>;
-    <th>ID</th>
-    <th>Nome</th>
-    <th>E-mail</th>
-    <th>Data de Nascimento</th>
-    <th>Comentário</th>
-    <th>Curso</th>
-    <th>Sexo</th>
-</tr>
-<?
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>Data de Nascimento</th>
+        <th>Comentário</th>
+        <th>Curso</th>
+        <th>Sexo</th>
+    </tr>
+<?php
 while($linha != null) {
     ?>
     <tr>
@@ -35,6 +35,8 @@ while($linha != null) {
         <td><a href='editar.php?id=<?=$linha['ID']?>'><button>Editar</button></a>
         <td><a href='excluir.php?id=<?=$linha['ID']?>'><button>Excluir</button></a>
     </tr>
-    <?$linha = mysqli_fetch_assoc($tab);
+    <?php $linha = mysqli_fetch_assoc($tab);
 }
 ?>
+    </table>
+</div>
