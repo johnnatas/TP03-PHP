@@ -35,16 +35,6 @@
                                         Inserir
                                     </a>
                                 </li>
-                                <li class="col-md-3">
-                                    <a href="atualizar.php">
-                                        Atualizar
-                                    </a>
-                                </li>
-                                <li class="col-md-3">
-                                    <a href="deletar.php">
-                                        Deletar
-                                    </a>
-                                </li>
                             </ul>
                         </div>
                     </div>
