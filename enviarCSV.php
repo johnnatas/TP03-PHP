@@ -20,9 +20,9 @@ if ($_FILES) { // Se $_FILES diferente de vazio, equivale a true
        Referência: http://php.net/manual/pt_BR/mysqli.prepare.php
     */
     $c = mysqli_connect("localhost","root","","db_tp03"); // Conexão
-    $ps=mysqli_prepare($c,"insert into aluno values(?,?,?)"); // Preparação
+    $ps=mysqli_prepare($c,"insert into aluno values(?,?,?,?,?,?)"); // Preparação
     // Liga variáveis aos parâmetros do Insert (ou seja, as ?)
-    mysqli_stmt_bind_param($ps,"iss",$ID,$MN,$ED);
+    mysqli_stmt_bind_param($ps,"issssss",$id,$nome,$email, $data, $comentario, $curso, $sexo);
 
     /* Copia arquivo
        move_uploaded_file(ArquivoOrigem,ArquivoDestino)
@@ -44,9 +44,13 @@ if ($_FILES) { // Se $_FILES diferente de vazio, equivale a true
             $lin = fgetcsv($a,100,";");
             while($lin!=null) {
                 // Atribui valores às vriáveis ligadas ao Insert preparado
-                $ID = $lin[0];
-                $MN = $lin[1];
-                $ED = $lin[2];
+                $id = $lin[0];
+                $nome = $lin[1];
+                $email = $lin[2];
+                $data = $lin[3];
+                $comentario = $lin[4];
+                $curso = $lin[5];
+                $sexo = $lin[6];
                 // Execução do Insert compementado com os dados nas variáveis ligadas
                 if (!mysqli_stmt_execute($ps)) {
                     $erro[count($erro)]="Linha ID={$lin[0]} não inserida";
