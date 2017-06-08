@@ -19,9 +19,8 @@
                 <br>
 
                 <?php
-                    include_once 'Classes/Banco.php';
-                    $banco = new Banco();
-                    $banco->listar();
+                    include_once("conexaoBanco.php");
+                    include_once("select.php");
                 ?>
 
             </div>
