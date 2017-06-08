@@ -1,6 +1,8 @@
 <?php
-include 'assets/includes/header.php';
-include 'assets/includes/menu.php';
+    include 'assets/includes/header.php';
+    include 'assets/includes/menu.php';
+    include_once("conexaoBanco.php");
+    include_once("editar.php");
 ?>
 
 <div class="container">
@@ -9,14 +11,14 @@ include 'assets/includes/menu.php';
 
     <div class="row">
         <div class="col-md-6">
-            <?php include_once 'assets/includes/formulario.php'; ?>
+            <form method="POST" action="alterado.php">
+                <input type="text" name="id" id="nome" class="form-control formulario" placeholder="ID" value="<?=$id?>" pattern="\d{1}"required/>
+                <?php include_once 'assets/includes/formulario.php'; ?>
+                <input type="submit" name="atualizar" value="Atualizar dados" class="btn formulario">
+            </form>
         </div>
         <div class="col-md-6">
-            <?php
-            include 'Classes/Banco.php';
-            $banco = new Banco();
-            $banco->listar();
-            ?>
+
         </div>
     </div>
 </div>
