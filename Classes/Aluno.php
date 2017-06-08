@@ -16,13 +16,13 @@ class Aluno{
     private $sexo;
 
     public function __construct($id, $nm, $em, $ns, $cm, $cs, $sx){
-        $this->setId($id);
-        $this->setNome($nm);
-        $this->setEmail($em);
-        $this->setNascimento($ns);
-        $this->setComentario($cm);
-        $this->setCurso($cs);
-        $this->setSexo($sx);
+        $this->id =  $id;
+        $this->nome = $nm;
+        $this->email = $em;
+        $this->nascimento = $ns;
+        $this->comentario = $cm;
+        $this->curso = $cs;
+        $this->sexo = $sx;
     }
 
     //OPERAÇÕES COM O BANCO
@@ -31,13 +31,13 @@ class Aluno{
         if(!$c){
             return "Erro ao estabelecer conexão com o banco";
         } else{
-           $id = $this->getId();
-           $nome = $this->getNome();
-           $email = $this->getEmail();
-           $data = $this->getNascimento();
-           $comentario = $this->getComentario();
-           $curso = $this->getCurso();
-           $sexo = $this->getSexo();
+           $id = $this->id;
+           $nome = $this->nome;
+           $email = $this->email;
+           $data = $this->nascimento;
+           $comentario = $this->comentario;
+           $curso = $this->curso;
+           $sexo = $this->sexo;
 
             if($ps = mysqli_prepare($c, "INSERT INTO tb_aluno VALUES(?,?,?,?,?,?,?)") or die(mysqli_error($c))){
                 $ps->bind_param("issssss", $id, $nome, $email, $data, $comentario, $curso, $sexo);
@@ -75,7 +75,7 @@ class Aluno{
     }
 
     //GETTERS AND SETTERS
-    public function getId(){
+    /*public function getId(){
         return $this->id;
     }
 
@@ -129,5 +129,5 @@ class Aluno{
 
     public function setSexo($sexo){
         $this->sexo = $sexo;
-    }
+    }*/
 }

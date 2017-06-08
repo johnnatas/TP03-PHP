@@ -16,7 +16,8 @@ if(isset($_POST['inserir'])) {
         $_POST['curso'],
         $_POST['sexo']);
 
-    echo $a->getNome();
-    echo $a->getEmail();
+    echo $_POST['nome'];
+
+    $a->create();
 }
 ?>

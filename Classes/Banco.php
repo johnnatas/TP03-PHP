@@ -20,7 +20,7 @@ class Banco {
         if(!$con){
             echo "Erro ao conectar com banco de dados: " . PHP_EOL;
         }
-     else{
+        else{
                $cmd = $con->query("SELECT * FROM tb_aluno");
             ?>
             <div class="table-responsive">
@@ -57,31 +57,6 @@ class Banco {
             mysqli_close($con);
         }
     }
-
-    function inserir($id, $nm, $em, $dt,$cm, $cs, $sx ){
-
-        $con = $this->conectarBanco();
-
-        if(!$con){
-            echo "Erro ao conectar com banco de dados: " . PHP_EOL;
-        }
-        else{
-            $prepareStatement = mysqli_prepare($con, "INSERT INTO tb_aluno VALUES (?,?,?,?,?,?,?");
-            mysqli_stmt_bind_param($prepareStatement, "issssss", $id, $nome, $email, $data,$comentario, $curso, $sexo);
-            $id = $_POST["id"];
-            $nm = $_POST["nome"];
-            $em = $_POST["email"];
-            $dt = $_POST["data"];
-            $cm = $_POST["comentario"];
-            $cs = $_POST["curso"];
-            $sx = $_POST["sexo"];
-
-            mysqli_stmt_execute($prepareStatement);
-        }
-        mysqli_close($con);
-
-    }
-
 
 }
 ?>
