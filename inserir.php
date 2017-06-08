@@ -13,10 +13,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <form action="insereBanco.php" method="POST">
+                <form action="insereBanco.php" method="GET">
                     <input type="text" name="id" id="id" class="form-control formulario" placeholder="ID" value="<?=$id?>" pattern="\d{1}"required/>
                     <?php include_once 'assets/includes/formulario.php'; ?>
                     <input type="submit" name="inserir" value="Inserir dados" class="btn formulario">
+                    <?php
+
+                    ?>
                 </form>
             </div>
             <div class="col-md-6">

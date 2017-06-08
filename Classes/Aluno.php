@@ -39,11 +39,15 @@ class Aluno{
            $curso = $this->getCurso();
            $sexo = $this->getSexo();
 
-            $ps = mysqli_prepare($c, "INSERT INTO tb_aluno VALUES(?,?,?,?,?,?,?)") or die(mysqli_error($c));
-            mysqli_stmt_bind_param($ps, "issssss", $id, $nome, $email, $data, $comentario, $curso, $sexo);
-            mysqli_stmt_execute($ps);
+            if($ps = mysqli_prepare($c, "INSERT INTO tb_aluno VALUES(?,?,?,?,?,?,?)") or die(mysqli_error($c))){
+                $ps->bind_param("issssss", $id, $nome, $email, $data, $comentario, $curso, $sexo);
+                $ps->execute();
+            }else{
+                echo '<script> alert("Não cadastrou"); </script>';
+            }
         }
         mysqli_close($c);
+        //header('Location: index.php');
     }
 
     public function delete($idP){
