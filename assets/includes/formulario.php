@@ -25,11 +25,4 @@
         </label>
     </div>
 
-<!--
-<form action="enviarCSV.php" method="POST">
-    <div class="formulario">
-        Ou cadastre-se por arquivo csv:
-        <input type="file" name="arquivo" id="arquivo">
-        <input type="submit" name="enviarCSV" value="Enviar" class="btn formulario">
-    </div>
--->
+

@@ -10,6 +10,7 @@
     //echo $a->getNome();
 
 if(isset($_GET['inserir'])){
+    extract($_GET);
     require_once 'Classes/Aluno.php';
     $a = new Aluno($_GET['id'],
         $_GET['nome'],
@@ -22,6 +23,7 @@ if(isset($_GET['inserir'])){
 }
 
     //$aluno->create();
-    echo $a->getNome();
+    //echo $a->getNome();
+    echo $a->getCurso();
 
 ?>

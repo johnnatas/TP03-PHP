@@ -21,6 +21,13 @@
 
                     ?>
                 </form>
+                <form action="enviarCSV.php" method="POST" enctype="multipart/form-data" id="enviarCSV">
+                    <div class="formulario">
+                        Ou cadastre-se por arquivo csv:
+                        <input type="file" accept="text/csv" name="aluno-csv" id="aluno-csv" required>
+                        <input type="submit" name="enviarCSV" value="Enviar" class="btn formulario">
+                    </div>
+                </form>
             </div>
             <div class="col-md-6">
               <?php
