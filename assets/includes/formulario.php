@@ -6,7 +6,6 @@
  * Time: 14:08
  */
 ?>
-    <input type="text" name="id" id="nome" class="form-control formulario" placeholder="ID" value="<?=$id?>" pattern="\d{1}"required/>
     <input type="text" name="nome" id="nome" class="form-control formulario" placeholder="Nome" value="<?=$id?>" pattern="[a-zA-Z\s]*$" required/>
     <input type="text" name="email" id="email" class="form-control formulario" placeholder="E-mail" value="<?=$id?>" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
     <input type="date" name="data" id="data" class="form-control formulario" placeholder="Data de Nascimento" max="1999-12-31" value="<?=$id?>" required/>
