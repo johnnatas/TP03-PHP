@@ -50,24 +50,24 @@ class Aluno{
         //header('Location: index.php');
     }
 
-    public function delete($idP){
+    public static function delete($idP){
         $c = mysqli_connect("localhost", "root", "", "db_tp03");
         if(!$c){
             return "Erro ao estabelecer conexão com o banco";
         } else {
-            $ps = mysqli_prepare($c, "DELETE ID, NOME, EMAIL, DATA, COMENTARIO, CURSO, SEXO FROM tb_aluno WHERE ID = ".$idP) or die(mysqli_error($c));
+            $ps = mysqli_prepare($c, "DELETE FROM tb_aluno WHERE ID = ?") or die(mysqli_error($c));
             mysqli_stmt_bind_param($ps, "i", $idP);
             mysqli_stmt_execute($ps);
         }
         mysqli_close($c);
     }
 
-    public function update($idP, $nmP, $emP, $nsP, $cmP, $csP, $sxP){
+    public static function update($idP, $nmP, $emP, $nsP, $cmP, $csP, $sxP){
         $c = mysqli_connect("localhost", "root", "", "db_tp03");
         if(!$c){
             return "Erro ao estabelecer conexão com o banco";
         } else {
-            $ps = mysqli_prepare($c, "UPDATE 'tb_aluno' SET NOME=?, EMAIL=?, DATA=?, COMENTARIO=?, CURSO=?, SEXO=? FROM 'tb_aluno' WHERE ID = ?") or die(mysqli_error($c));
+            $ps = mysqli_prepare($c, "UPDATE tb_aluno SET NOME=?, EMAIL=?, DATA=?, COMENTARIO=?, CURSO=?, SEXO=?  WHERE ID = ?") or die(mysqli_error($c));
             mysqli_stmt_bind_param($ps, "ssssssi", $nmP, $emP, $nsP, $cmP, $csP, $sxP, $idP);
             mysqli_stmt_execute($ps);
         }
