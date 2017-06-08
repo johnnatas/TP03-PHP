@@ -31,9 +31,16 @@ class Aluno{
         if(!$c){
             return "Erro ao estabelecer conexão com o banco";
         } else{
-            $ps = mysqli_prepare($c, "INSERT INTO 'tb_aluno' VALUES(?,?,?,?,?,?,?)");
-            mysqli_stmt_bind_param($ps, "issssss", $this->getId(), $this->getNome(), $this->getEmail(), $this->getNascimento(), $this->getComentario(), $this->getCurso(), $this->getSexo());
+           $id = $this->getId();
+           $nome = $this->getNome();
+           $email = $this->getEmail();
+           $data = $this->getNascimento();
+           $comentario = $this->getComentario();
+           $curso = $this->getCurso();
+           $sexo = $this->getSexo();
 
+            $ps = mysqli_prepare($c, "INSERT INTO tb_aluno VALUES(?,?,?,?,?,?,?)") or die(mysqli_error($c));
+            mysqli_stmt_bind_param($ps, "issssss", $id, $nome, $email, $data, $comentario, $curso, $sexo);
             mysqli_stmt_execute($ps);
         }
         mysqli_close($c);
@@ -44,7 +51,7 @@ class Aluno{
         if(!$c){
             return "Erro ao estabelecer conexão com o banco";
         } else {
-            $ps = mysqli_prepare($c, "DELETE ID, NOME, EMAIL, DATA, COMENTARIO, CURSO, SEXO FROM 'tb_aluno' WHERE ID = ".$idP);
+            $ps = mysqli_prepare($c, "DELETE ID, NOME, EMAIL, DATA, COMENTARIO, CURSO, SEXO FROM tb_aluno WHERE ID = ".$idP) or die(mysqli_error($c));
             mysqli_stmt_bind_param($ps, "i", $idP);
             mysqli_stmt_execute($ps);
         }
@@ -56,7 +63,7 @@ class Aluno{
         if(!$c){
             return "Erro ao estabelecer conexão com o banco";
         } else {
-            $ps = mysqli_prepare($c, "UPDATE 'tb_aluno' SET NOME=?, EMAIL=?, DATA=?, COMENTARIO=?, CURSO=?, SEXO=? FROM 'tb_aluno' WHERE ID = ?");
+            $ps = mysqli_prepare($c, "UPDATE 'tb_aluno' SET NOME=?, EMAIL=?, DATA=?, COMENTARIO=?, CURSO=?, SEXO=? FROM 'tb_aluno' WHERE ID = ?") or die(mysqli_error($c));
             mysqli_stmt_bind_param($ps, "ssssssi", $nmP, $emP, $nsP, $cmP, $csP, $sxP, $idP);
             mysqli_stmt_execute($ps);
         }
