@@ -8,22 +8,20 @@
  */
 class Banco {
 
-    function conectarBanco(){
-        return mysqli_connect("localhost", "root", "", "db_tp03");
+    function __construct()
+    {
+
     }
 
+
     function listar(){
-        $con = $this->conectarBanco();
+        $con = mysqli_connect("localhost", "root", "", "db_tp03");
 
         if(!$con){
             echo "Erro ao conectar com banco de dados: " . PHP_EOL;
         }
-        else{
-            $dados = array();
-            $prepareStatement = mysqli_prepare($con, "SELECT ID, NOME, EMAIL, DATA, COMENTARIO, CURSO, SEXO  FROM tb_aluno");
-            mysqli_stmt_bind_param($prepareStatement, "issssss", $id, $nome, $email, $data, $comentario, $curso, $sexo);
-            mysqli_stmt_execute($prepareStatement);
-            mysqli_stmt_bind_result();
+     else{
+               $cmd = $con->query("SELECT * FROM tb_aluno");
             ?>
             <div class="table-responsive">
                 <table class="table">
