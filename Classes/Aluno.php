@@ -26,14 +26,13 @@ class Aluno{
     }
 
     //OPERAÇÕES COM O BANCO
-    public function create($idP, $nmP, $emP, $nsP, $cmP, $csP, $sxP){
+    public function create(){
         $c = mysqli_connect("localhost", "root", "", "db_tp03");
         if(!$c){
             return "Erro ao estabelecer conexão com o banco";
         } else{
-            $aluno = new Aluno($idP, $nmP, $emP, $nsP, $cmP, $csP, $sxP);
             $ps = mysqli_prepare($c, "INSERT INTO 'tb_aluno' VALUES(?,?,?,?,?,?,?)");
-            mysqli_stmt_bind_param($ps, "issssss", $idP, $nmP, $emP, $nsP, $cmP, $csP, $sxP);
+            mysqli_stmt_bind_param($ps, "issssss", $this->getId(), $this->getNome(), $this->getEmail(), $this->getNascimento(), $this->getComentario(), $this->getCurso(), $this->getSexo());
 
             mysqli_stmt_execute($ps);
         }
