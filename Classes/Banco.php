@@ -6,16 +6,24 @@
  * Date: 30/05/17
  * Time: 19:35
  */
-class Banco
-{
+class Banco {
+
+    function conectarBanco(){
+        return mysqli_connect("localhost", "root", "", "db_tp03");
+    }
+
     function listar(){
-        $con = mysqli_connect("localhost", "root", "", "db_tp03");
+        $con = $this->conectarBanco();
 
         if(!$con){
             echo "Erro ao conectar com banco de dados: " . PHP_EOL;
         }
         else{
-            $cmd = $con->query("SELECT * FROM tb_aluno");
+            $dados = array();
+            $prepareStatement = mysqli_prepare($con, "SELECT ID, NOME, EMAIL, DATA, COMENTARIO, CURSO, SEXO  FROM tb_aluno");
+            mysqli_stmt_bind_param($prepareStatement, "issssss", $id, $nome, $email, $data, $comentario, $curso, $sexo);
+            mysqli_stmt_execute($prepareStatement);
+            mysqli_stmt_bind_result();
             ?>
             <div class="table-responsive">
                 <table class="table">
@@ -52,13 +60,30 @@ class Banco
         }
     }
 
-    function inserir($id, $nome, $email, $data,$comentario, $curso, $sexo ){
+    function inserir($id, $nm, $em, $dt,$cm, $cs, $sx ){
 
-        $con = mysqli_connect("localhost", "root", "", "db_tp03");
-        $cmd = $con->query("INSERT INTO tb_aluno VALUES ($id, $nome, $email, $data,$comentario, $curso, $sexo ");
-        //a continuar...
+        $con = $this->conectarBanco();
+
+        if(!$con){
+            echo "Erro ao conectar com banco de dados: " . PHP_EOL;
+        }
+        else{
+            $prepareStatement = mysqli_prepare($con, "INSERT INTO tb_aluno VALUES (?,?,?,?,?,?,?");
+            mysqli_stmt_bind_param($prepareStatement, "issssss", $id, $nome, $email, $data,$comentario, $curso, $sexo);
+            $id = $_POST["id"];
+            $nm = $_POST["nome"];
+            $em = $_POST["email"];
+            $dt = $_POST["data"];
+            $cm = $_POST["comentario"];
+            $cs = $_POST["curso"];
+            $sx = $_POST["sexo"];
+
+            mysqli_stmt_execute($prepareStatement);
+        }
+        mysqli_close($con);
 
     }
+
 
 }
 ?>
