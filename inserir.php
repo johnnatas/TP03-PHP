@@ -8,24 +8,28 @@
     $comentario = "";
     $curso = "";
     $sexo = "";
+
+
 ?>
 
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <h1>Insira os dados aqui</h1>
-                <form action="insereBanco.php" method="POST" id="inserir">
-                    <!-- <input type="text" name="id" id="id" class="form-control formulario" placeholder="ID" value="<?=$id?>" pattern="\d{1}"required/> -->
+
+                <form action="insereBanco.php" method="GET" id="inserir">
+                     <input type="text" name="id" id="id" class="form-control formulario" placeholder="ID" value="<?=$id?>" pattern="\d{1}" required/>
                     <?php include_once 'assets/includes/formulario.php'; ?>
                     <input type="submit" name="inserir" value="Inserir dados" class="btn formulario">
                 </form>
+
                 <form action="enviarCSV.php" method="POST" enctype="multipart/form-data" id="enviarCSV">
-                    <div class="formulario">
                         Ou cadastre-se por arquivo csv:
-                        <input type="file" accept="text/csv" name="aluno-csv" id="aluno-csv" required>
+                        <input name="csv" type="file" accept="text/csv"  id="csv">
                         <input type="submit" name="enviarCSV" value="Enviar" class="btn formulario">
-                    </div>
                 </form>
+
+
             </div>
             <div class="col-md-6" id="lista-inserir">
               <?php

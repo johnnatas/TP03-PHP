@@ -6,28 +6,27 @@
  * Time: 13:30
  */
 
-require_once 'Classes/Aluno.php';
+    require_once 'Classes/Aluno.php';
 
+$status = move_uploaded_file($_FILES["csv"]["tmp_name"], "files/".$_FILES["csv"]["name"]);
 try{
-    $status = move_uploaded_file($_FILES["aluno-csv"]["tmp_name"], "files/" . time() . "-" . $_FILES["aluno-csv"]["name"]);
-    var_dump($_FILES);
     if ($status) {
-        $f = fopen("files/" . time() . "-" . $_FILES["aluno-csv"]["name"], "r");
+        $f = fopen("files/".$_FILES["csv"]["name"], "r");
         if ($f) {
-            $title_row = fgetcsv($f, 100, ";");
             $rows = fgetcsv($f, 100, ";");
-            while ($rows !== false) {
-                $aluno = new Aluno($rows[1], $rows[2], $rows[3], $rows[4], $rows[5], $rows[6], $rows[7]);
+            $rows = fgetcsv($f, 100, ";");
+            while ($rows != null) {
+                $aluno = new Aluno($rows[0], $rows[1], $rows[2], $rows[3], $rows[4], $rows[5], $rows[6]);
                 $aluno->create();
                 $rows = fgetcsv($f, 100, ";");
             }
             fclose($f);
         }
     }
-}catch(Exception $e){
-    echo $e->getMessage();
+} catch(Exception $ex){
+    echo $ex->getMessage();
 }
 
-header("location.index.php");
-?>
 
+header("location.inserir.php");
+?>
