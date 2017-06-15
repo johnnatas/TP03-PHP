@@ -7,16 +7,11 @@
 
                 <h1 class="text-center">Trabalho Prático de Linguagem de Programação IV</h1>
 
-                <h2 class="text-center">Lista de todos os cadastrados no sistema:</h2>
-
-                <div class="row">
-                    <input type="text" class="form-control" onkeyup="busca(this.value)" placeholder="Consulte aqui..." /><br>
+                <div class="row" id="procurar">
+                    <input type="text" class="form-control col-md-5" onkeyup="busca(this.value)" placeholder="Consulte aqui..." /><br>
                     <i class="fa fa-search" aria-hidden="true"></i>
                 </div>
 
-                <br>
-                <br>
-                <br>
                 <div id="exibe-dados">
                     <?php
                         include_once "conexaoBanco.php";

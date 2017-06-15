@@ -7,7 +7,7 @@
  */
 ?>
 
-<div class="container-fluid">
+<div>
     <footer>
         <span>&copy Todos os direitos reservados</span>
     </footer>
