@@ -25,36 +25,6 @@ class Aluno{
         $this->sexo = $sx;
     }
 
-    /*public function __construct($id){
-        $this->setId($id);
-    }
-
-    public function searchAluno($idP){
-        $c = mysqli_connect("localhost", "root", "", "db_tp03");
-        if(!$c){
-            return "Erro ao estabelecer conexão com o banco";
-        } else{
-            if($ps = mysql_prepare($c, "SELECT NOME, EMAIL, DATA, COMENTARIO, CURSO, SEXO FROM  tb_aluno WHERE ID =".$idP or die(mysqli_error($c))){
-                mysqli_stmt_execute($ps);
-                mysqli_stmt_bind_result($ps, $this->nome, $this->email, $this->nascimento, $this->comentario, $this->curso, $this->sexo);
-                
-                mysqli_stmt_fetch($ps)
-                $aluno = mysqli_stmt_fetch($ps);
-
-                $this->setNome($aluno["nome"]);
-                $this->setEmail($aluno["email"]);
-                $this->setNascimento($aluno["data"]);
-                $this->setComentario($aluno["comentario"]);
-                $this->setCurso($aluno["curso"]);
-                $this->setSexo($aluno["sexo"]);    
-
-                
-
-
-            }
-        }
-        mysqli_close($c);
-    }*/
 
     //OPERAÇÕES COM O BANCO
     public function create(){
