@@ -18,7 +18,7 @@
     <div class="row">
         <div class="col-md-6">
             <form method="GET" action="editar.php">
-                <input type="text" name="id" id="id" class="form-control formulario" value="<?=$id?>" disabled/>
+                <input type="text" name="id" id="id" class="form-control formulario" value="<?=$id?>" hidden/>
                 <?php include_once 'assets/includes/formulario.php'; ?>
                 <input type="submit" name="atualizar" value="Atualizar dados" class="btn formulario">
             </form>

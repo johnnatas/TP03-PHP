@@ -98,9 +98,14 @@ class Aluno{
         if(!$c){
             return "Erro ao estabelecer conexão com o banco";
         } else {
-            $ps = mysqli_prepare($c, "UPDATE tb_aluno SET NOME=?, EMAIL=?, DATA=?, COMENTARIO=?, CURSO=?, SEXO=?  WHERE ID = ?") or die(mysqli_error($c));
-            mysqli_stmt_bind_param($ps, "ssssssi", $nmP, $emP, $nsP, $cmP, $csP, $sxP, $idP);
-            mysqli_stmt_execute($ps);
+            
+            if($ps = mysqli_prepare($c, "UPDATE tb_aluno SET NOME=?, EMAIL=?, DATA=?, COMENTARIO=?, CURSO=?, SEXO=?  WHERE ID = ?") or die(mysqli_error($c))){
+
+                mysqli_stmt_bind_param($ps, "ssssssi", $nmP, $emP, $nsP, $cmP, $csP, $sxP, $idP);
+                mysqli_stmt_execute($ps);
+            }else{
+                echo '<script> alert("Não atualizou"); </script>';
+            }
         }
         mysqli_close($c);
     }
