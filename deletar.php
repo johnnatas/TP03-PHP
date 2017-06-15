@@ -1,27 +1,6 @@
 <?php
-include 'assets/includes/header.php';
-include 'assets/includes/menu.php';
-?>
+require_once 'Classes/Aluno.php';
 
-<div class="container">
-
-    <h1>Delete um cadastro</h1>
-
-    <div class="row">
-        <div class="col-md-6">
-            <?php include_once 'assets/includes/formulario.php'; ?>
-        </div>
-        <div class="col-md-6">
-            <?php
-            include 'Classes/Banco.php';
-            $banco = new Banco();
-            $banco->listar();
-            ?>
-        </div>
-    </div>
-</div>
-
-<?php
-include 'assets/includes/footer.php';
-include 'assets/includes/scripts.php';
+Aluno::delete($_GET["id"]);
+header("location: index.php");
 ?>

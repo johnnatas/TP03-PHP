@@ -17,6 +17,22 @@ if(isset($_POST['inserir'])) {
         $_POST['sexo']);
 
     echo $_POST['nome'];
+=======
+if(isset($_GET['inserir'])){
+    extract($_GET);
+    require_once 'Classes/Aluno.php';
+    $a = new Aluno($_GET['id'],
+        $_GET['nome'],
+        $_GET['email'],
+        $_GET['data'],
+        $_GET['comentario'],
+        $_GET['curso'],
+        $_GET['sexo']);
+    $a->create();
+}
+
+    
+    header("location: index.php");
 
     $a->create();
 }

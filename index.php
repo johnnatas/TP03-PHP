@@ -10,19 +10,19 @@
                 <h2 class="text-center">Lista de todos os cadastrados no sistema:</h2>
 
                 <div class="row">
-                    <input type="text" class="form-control" /><br>
+                    <input type="text" class="form-control" onkeyup="busca(this.value)" placeholder="Consulte aqui..." /><br>
                     <i class="fa fa-search" aria-hidden="true"></i>
                 </div>
 
                 <br>
                 <br>
                 <br>
-
-                <?php
-                    include_once "conexaoBanco.php";
-                    include_once "select.php";
-                ?>
-
+                <div id="exibe-dados">
+                    <?php
+                        include_once "conexaoBanco.php";
+                        include_once "select.php";
+                    ?>
+                </div>
             </div>
 
         <!-- rodapé -->
@@ -33,3 +33,4 @@
 
     </body>
 </html>
+<script type="text/javascript" src="assets/js/script.js"></script>

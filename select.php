@@ -6,9 +6,19 @@
  * Time: 05:59
  */
 $con = getConnection();
-$SQL = "SELECT ID, NOME, EMAIL, DATA, COMENTARIO, CURSO, SEXO  FROM tb_aluno";
-$tab = mysqli_query($con, $SQL);
-$linha = mysqli_fetch_assoc($tab);
+
+$res = $_GET["res"];
+
+if(strlen($res) == 0){
+    $SQL = "SELECT ID, NOME, EMAIL, DATA, COMENTARIO, CURSO, SEXO  FROM tb_aluno";
+    $tab = mysqli_query($con, $SQL);
+    $linha = mysqli_fetch_assoc($tab);
+}else{
+    $SQL = "SELECT ID, NOME, EMAIL, DATA, COMENTARIO, CURSO, SEXO  FROM tb_aluno WHERE NOME LIKE '%". $res ."%'";
+    $tab = mysqli_query($con, $SQL);
+    $linha = mysqli_fetch_assoc($tab);
+}
+
 ?>
 <div class='table-responsive'>
     <table class='table'>
@@ -32,8 +42,8 @@ while($linha != null) {
         <td><?=$linha["COMENTARIO"]?></td>
         <td><?=$linha["CURSO"]?></td>
         <td><?=$linha["SEXO"]?></td>
-        <td><a href='editar.php?id=<?=$linha['ID']?>'><button>Editar</button></a>
-        <td><a href='excluir.php?id=<?=$linha['ID']?>'><button>Excluir</button></a>
+        <td><a href='atualizar.php?id=<?=$linha['ID']?>&nome=<?=$linha['NOME']?>&email=<?=$linha['EMAIL']?>&data=<?=$linha['DATA']?>&comentario=<?=$linha['COMENTARIO']?>'><button>Editar</button></a>
+        <td><a href='deletar.php?id=<?=$linha['ID']?>'><button>Excluir</button></a>
     </tr>
     <?php $linha = mysqli_fetch_assoc($tab);
 }
