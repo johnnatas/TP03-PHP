@@ -32,7 +32,7 @@ while($linha != null) {
         <td><?=$linha["COMENTARIO"]?></td>
         <td><?=$linha["CURSO"]?></td>
         <td><?=$linha["SEXO"]?></td>
-        <td><a href='atualizar.php?id=<?=$linha['ID']?>'><button>Editar</button></a>
+        <td><a href='atualizar.php?id=<?=$linha['ID']?>&nome=<?=$linha['NOME']?>&email=<?=$linha['EMAIL']?>&data=<?=$linha['DATA']?>&comentario=<?=$linha['COMENTARIO']?>'><button>Editar</button></a>
         <td><a href='deletar.php?id=<?=$linha['ID']?>'><button>Excluir</button></a>
     </tr>
     <?php $linha = mysqli_fetch_assoc($tab);
