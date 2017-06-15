@@ -16,8 +16,6 @@ if(isset($_POST['inserir'])) {
         $_POST['curso'],
         $_POST['sexo']);
 
-    echo $_POST['nome'];
-    
 if(isset($_GET['inserir'])){
     extract($_GET);
     require_once 'Classes/Aluno.php';
@@ -31,9 +29,8 @@ if(isset($_GET['inserir'])){
     $a->create();
 }
 
-    
-    header("location: index.php");
-
     $a->create();
+    header("location: inserir.php");
+
 }
 ?>
