@@ -47,7 +47,7 @@ class Aluno{
             }
         }
         mysqli_close($c);
-        //header('Location: index.php');
+        header('Location: inserir.php');
     }
 
     public function delete($idP){
@@ -74,60 +74,4 @@ class Aluno{
         mysqli_close($c);
     }
 
-    //GETTERS AND SETTERS
-    /*public function getId(){
-        return $this->id;
-    }
-
-    public function setId($id){
-        $this->id = $id;
-    }
-
-    public function getNome(){
-        return $this->nome;
-    }
-
-    public function setNome($nome){
-        $this->nome = $nome;
-    }
-
-    public function getEmail(){
-        return $this->email;
-    }
-
-    public function setEmail($email){
-        $this->email = $email;
-    }
-
-    public function getNascimento(){
-        return $this->nascimento;
-    }
-
-    public function setNascimento($nascimento){
-        $this->nascimento = $nascimento;
-    }
-
-    public function getComentario(){
-        return $this->comentario;
-    }
-
-    public function setComentario($comentario){
-        $this->comentario = $comentario;
-    }
-
-    public function getCurso(){
-        return $this->curso;
-    }
-
-    public function setCurso($curso){
-        $this->nome = $curso;
-    }
-
-    public function getSexo(){
-        return $this->sexo;
-    }
-
-    public function setSexo($sexo){
-        $this->sexo = $sexo;
-    }*/
 }
