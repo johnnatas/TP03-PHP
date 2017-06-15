@@ -17,7 +17,7 @@
             <div class="col-md-6">
                 <h1>Insira os dados aqui</h1>
 
-                <form action="insereBanco.php" method="GET" id="inserir">
+                <form action="insereBanco.php" method="POST" id="inserir">
                      <input type="text" name="id" id="id" class="form-control formulario" placeholder="ID" value="<?=$id?>" pattern="\d{1}" required/>
                     <?php include_once 'assets/includes/formulario.php'; ?>
                     <input type="submit" name="inserir" value="Inserir dados" class="btn formulario">
