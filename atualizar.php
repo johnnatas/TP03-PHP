@@ -30,3 +30,4 @@
 include 'assets/includes/footer.php';
 include 'assets/includes/scripts.php';
 ?>
+<script type="text/javascript" src="assets/js/script.js"></script>

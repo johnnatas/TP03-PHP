@@ -8,7 +8,7 @@
 ?>
     <input type="text" name="nome" id="nome" class="form-control formulario" placeholder="Nome" value="<?=$nome?>" pattern="[a-zA-Z\s]*$" required/>
     <input type="text" name="email" id="email" class="form-control formulario" placeholder="E-mail" value="<?=$email?>" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
-    <input type="date" name="data" id="data" class="form-control formulario" placeholder="Data de Nascimento" max="1999-12-31" value="<?=$data?>" required/>
+    <input type="date" name="data" id="data" class="form-control formulario" onkeypress="mascaraData(this)" placeholder="Data de Nascimento" max="31-12-1999" value="<?=$data?>" required/>
     <textarea name="comentario" id="comentario" class="form-control formulario" placeholder="Escreva um comentário"> <?=$comentario?></textarea>
     <select name="curso" id="curso" class="form-control formulario">
         <option value="Análise e Desenvolvimento de Sistemas">Análise e Desenvolvimento de Sistemas</option>

@@ -70,8 +70,12 @@ class Aluno{
            $curso = $this->curso;
            $sexo = $this->sexo;
 
+           //Formatação de Data para entrada no banco de dados
+           $dt = new DateTime($data);
+           $dtModel = $dt->format("Y/m/d");
+
             if($ps = mysqli_prepare($c, "INSERT INTO tb_aluno VALUES(?,?,?,?,?,?,?)") or die(mysqli_error($c))){
-                $ps->bind_param("issssss", $id, $nome, $email, $data, $comentario, $curso, $sexo);
+                $ps->bind_param("issssss", $id, $nome, $email, $dtModel, $comentario, $curso, $sexo);
                 $ps->execute();
             }else{
                 echo '<script> alert("Não cadastrou"); </script>';

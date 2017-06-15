@@ -38,7 +38,13 @@ while($linha != null) {
         <td><?=$linha["ID"]?></td>
         <td><?=$linha["NOME"]?></td>
         <td><?=$linha["EMAIL"]?></td>
-        <td><?=$linha["DATA"]?></td>
+        <td>
+        <?php
+            $dt = new DateTime($linha["DATA"]);
+            $dtModel = $dt->format("d-m-Y");
+            echo $dtModel;
+        ?>
+        </td>
         <td><?=$linha["COMENTARIO"]?></td>
         <td><?=$linha["CURSO"]?></td>
         <td><?=$linha["SEXO"]?></td>

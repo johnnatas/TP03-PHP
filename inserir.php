@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-md-6">
                 <form action="insereBanco.php" method="POST">
-                    <input type="text" name="id" id="id" class="form-control formulario" placeholder="ID" value="<?=$id?>" pattern="\d{1}"required/>
+                    <!-- <input type="text" name="id" id="id" class="form-control formulario" placeholder="ID" value="<?=$id?>" pattern="\d{1}"required/> -->
                     <?php include_once 'assets/includes/formulario.php'; ?>
                     <input type="submit" name="inserir" value="Inserir dados" class="btn formulario">
                 </form>
@@ -26,13 +26,12 @@
                     </div>
                 </form>
             </div>
-            <!--<div class="col-md-6">
+            <div class="col-md-6">
               <?php
-                include 'Classes/Banco.php';
-                $banco = new Banco();
-                $banco->listar();
+                include_once "conexaoBanco.php";
+                include_once "select.php";
               ?>
-            </div>-->
+            </div>
         </div>
     </div>
 
@@ -40,3 +39,4 @@
     include 'assets/includes/footer.php';
     include 'assets/includes/scripts.php';
 ?>
+<script type="text/javascript" src="assets/js/script.js"></script>
