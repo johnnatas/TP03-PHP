@@ -14,8 +14,8 @@
 
                 <div id="exibe-dados">
                     <?php
-                        include_once "conexaoBanco.php";
-                        include_once "select.php";
+                        include "conexaoBanco.php";
+                        include_once "tabela-dados.php";
                     ?>
                 </div>
                 <h2 class="text-center">Mapa</h2>

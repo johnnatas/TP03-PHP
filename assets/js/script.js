@@ -21,10 +21,9 @@ function busca(txt){
 
             document.getElementById('exibe-dados').innerHTML = resposta;
         }
-
-        req.send(null);
-
     }
+    
+    req.send(null);
 }
 
 function mascaraData(val) {

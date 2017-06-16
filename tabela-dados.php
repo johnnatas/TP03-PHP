@@ -1,26 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Leonardo
- * Date: 08/06/2017
- * Time: 05:59
- */
+    
+    $con = getConnection();
 
-$con = mysqli_connect("localhost", "root", "", "db_tp03");
-
-mysqli_set_charset($con, "utf8");
-$res = $_GET["res"];
-
-if(strlen($res) == 0){
     $SQL = "SELECT ID, NOME, EMAIL, DATA, COMENTARIO, CURSO, SEXO  FROM tb_aluno";
     $tab = mysqli_query($con, $SQL);
     $linha = mysqli_fetch_assoc($tab);
-}else{
-    $SQL = "SELECT ID, NOME, EMAIL, DATA, COMENTARIO, CURSO, SEXO  FROM tb_aluno WHERE NOME LIKE '%". $res ."%'";
-    $tab = mysqli_query($con, $SQL);
-    $linha = mysqli_fetch_assoc($tab);
-}
-
 ?>
 <div class='table-responsive'>
     <table class='table table-striped table-hover'>
