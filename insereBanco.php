@@ -5,6 +5,7 @@
      * Date: 08/06/2017
      * Time: 04:12
      */
+include 'assets/includes/session_cookies.php';
 
 if(isset($_POST['inserir'])) {
     require_once 'Classes/Aluno.php';
