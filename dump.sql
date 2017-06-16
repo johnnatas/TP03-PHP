@@ -53,16 +53,3 @@ INSERT INTO `tb_aluno` (`id`, `nome`, `email`, `data`, `comentario`, `curso`, `s
 --
 ALTER TABLE `tb_aluno`
   ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT de tabelas apagadas
---
-
---
--- AUTO_INCREMENT de tabela `tb_aluno`
---
-ALTER TABLE `tb_aluno`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
