@@ -7,7 +7,7 @@
  */
 $con = getConnection();
 
-mysqli_set_charset("utf8");
+mysqli_set_charset($con, "utf8");
 $res = $_GET["res"];
 
 if(strlen($res) == 0){
