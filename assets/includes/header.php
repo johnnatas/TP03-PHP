@@ -10,9 +10,11 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <link rel="icon" href="../img/icone-fatec.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../img/icone-fatec.png" type="image/x-icon" />
     <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-    <title>Home</title>
+    <title>TP03-PHP</title>
 </head>
 <body>
