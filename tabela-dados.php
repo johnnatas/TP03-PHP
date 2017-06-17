@@ -1,7 +1,7 @@
 <?php
     
     $con = getConnection();
-
+    mysqli_set_charset($con, "utf8");
     $SQL = "SELECT ID, NOME, EMAIL, DATA, COMENTARIO, CURSO, SEXO  FROM tb_aluno";
     $tab = mysqli_query($con, $SQL);
     $linha = mysqli_fetch_assoc($tab);
